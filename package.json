@@ -1,0 +1,7 @@
+{
+  "name": "@wcd/yukta2000.lwc-l2slt723",
+  "version": "0.0.0",
+  "scripts": {
+    "serve": "npx wcd-cli@latest serve Jchg50s9WTSYQRlM5YP2 --open"
+  }
+}

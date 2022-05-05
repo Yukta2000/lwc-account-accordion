@@ -1,0 +1,24 @@
+<template>
+	<div class="main-container" style="background-color: #F0FFFF">	
+		<lightning-accordion class="main-container__account-accordion" allow-multiple-sections-open=true	>
+			<template for:each={accountsData} for:item="acc">
+				<div key={acc.Id}>
+					<lightning-accordion-section name={acc.Id} label={acc.Name} >
+						<lightning-card icon-name="standard:account" title={acc.Name}>
+							<div class="slds-p-horizontal_medium">
+							<p>Industry: {acc.Industry}</p>
+							<p>Website: <lightning-formatted-url value={acc.Website}></lightning-formatted-url></p>
+							<p>No of Employees: 
+								<lightning-formatted-number value={acc.EmpCount}>
+								</lightning-formatted-number>
+							</p>
+							<p>Annual Revenue: <lightning-formatted-number value={acc.AnnualRevenue} format-style="currency" currency-code="USD"></lightning-formatted-number>
+							</p>
+							</div>
+						</lightning-card>
+  				</lightning-accordion-section>	
+				</div>
+			</template>
+		</lightning-accordion>	
+  </div>
+</template>
